@@ -12,6 +12,7 @@ import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
 
+val THREE_ELEMENT_LIST = listOf(R.string.first, R.string.second, R.string.third)
 @Composable
 fun RowScreen(){
     MyRow()
@@ -22,5 +23,15 @@ fun RowScreen(){
 }
 @Composable
 fun MyRow(){
+    Row(verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = Modifier.fillMaxSize()) {
+
+        THREE_ELEMENT_LIST.forEach { textResId ->
+            Text(text = stringResource(id = textResId),
+                fontSize = 18.sp
+            )
+        }
+    }
 
 }
