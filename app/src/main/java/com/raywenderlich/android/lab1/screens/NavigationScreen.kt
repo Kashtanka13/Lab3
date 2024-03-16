@@ -31,6 +31,7 @@ fun NavigationScreen() {
 
             NavigationButton(stringResource(id = R.string.scroll), Screen.Scrolling)
             NavigationButton(stringResource(id = R.string.List), Screen.List)
+            NavigationButton(stringResource(id = R.string.Grid), Screen.Grid)
         }
     }
 }
